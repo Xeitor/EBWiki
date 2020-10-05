@@ -1,6 +1,4 @@
 #!/bin/bash
-source ./dev_provisions/environment.sh
-
 chown postgres ./db/structure.sql
 cp -v ./dev_provisions/database.yml ./config
 
@@ -45,6 +43,3 @@ echo "psql    = $(psql --version)"
 echo "redis   = $(redis-server --version | awk '{print $3}')"
 echo "elastic = $(curl -sX GET 'http://localhost:9200')"
 echo '#########################################################'
-
-echo "## Starting the server..."
-bundle exec rails server -b 0.0.0.0 -e development

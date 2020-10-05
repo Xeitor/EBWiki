@@ -26,4 +26,6 @@ RUN gem install bundler && \
 
 WORKDIR /usr/src/ebwiki
 EXPOSE 3000
-ENTRYPOINT ./dev_provisions/entrypoint.sh
+COPY . /usr/src/ebwiki
+ENTRYPOINT ["/usr/src/ebwiki/dev_provisions/entrypoint.sh"]
+CMD ["bundle","exec","rails","server","-b","0.0.0.0","-e","development"]

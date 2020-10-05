@@ -10,6 +10,12 @@ export MAILCHIMP_LIST_ID=''
 export CODECLIMATE_REPO_TOKEN=''
 export AUTOBUS_SNAPSHOT_URL=''
 
+export PGHOST='localhost'
+export PGPORT='5432'
+export PGDATABASE='blackops_development'
+export PGUSER='blackops'
+export PGPASSWORD='ebwiki'
+
 # AWS Credentials for FakeS3.  Please don't change!
 export AWS_ACCESS_KEY_ID='accessKey1'
 export AWS_SECRET_KEY_ID='verySecretKey1'
